@@ -8,21 +8,23 @@ function getRandomHexColor() {
 
 
  startBtn.addEventListener('click', randomBgColorStart);
- stopBtn.addEventListener('click', stoprandomBgColor);
+ stopBtn.addEventListener('click', stopRandomBgColor);
 
  stopBtn.disabled = true;
+ let timerId = 0;
 
  function randomBgColorStart(){
 	startBtn.disabled = true;
 	stopBtn.disabled = false;
 
-	timerId = setInterval(() =>	{
+	 timerId = setInterval(() =>	{
 		body.style.backgroundColor = getRandomHexColor();
 	}, 1000)
+	
  };
 
 
- function stoprandomBgColor() {
+ function stopRandomBgColor() {
 	startBtn.disabled = false;
 	stopBtn.disabled = true;
 
