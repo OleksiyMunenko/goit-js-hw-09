@@ -10,7 +10,6 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
-  display: block;
 }
 
 img {
@@ -23,11 +22,11 @@ img {
 	margin-top: 50px;
 }
 
-input {
+.startTimer input {
 	font-size: 25px;
 }
 
-button {
+.startTimer button {
 	font-size: 30px;
 	margin-left: 15px;
 }
@@ -40,6 +39,6 @@ button {
 	margin-top: 20px;
 }
 
-.field:not(:last-child) {
+.timer .field:not(:last-child) {
 	margin-right: 15px;
 }
