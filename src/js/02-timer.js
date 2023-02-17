@@ -32,6 +32,8 @@ const options = {
 	startBtn.addEventListener('click', startTimer);
 
 function startTimer() {
+			startBtn.disabled = true;
+
 	
 	timerId = setInterval(() => {
 		const currentTime = Date.now();
@@ -42,7 +44,6 @@ function startTimer() {
 			valueEl[1].textContent = `${hours}`;
 			valueEl[2].textContent = `${minutes}`;
 			valueEl[3].textContent = `${seconds}`;
-			console.log(`${days}:${hours}:${minutes}:${seconds}`);
 			return
 		}
 		Notiflix.Report.success('Game over');
